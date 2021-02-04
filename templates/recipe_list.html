@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block body %}
+
+    <h1>{% trans "Recipe list" %}</h1>
+    <p> {% blocktrans trimmed %}
+        We accept no responsibility or liability
+        (including, but not limited to, any direct or consequential loss or
+        damage that might occur to you and/or any other third party)
+        arising out of, or in connection with the information on this site,
+        including information relating to the recipes it publishes.
+    {% endblocktrans %}
+    </p>
+    <ul>
+        {% for object in object_list %}
+            <li>
+                {{ object.title }}
+                <a href="{% url 'recipe_detail' object.pk %}">
+                    <button class="btn btn-secondary" type="button">
+                        &raquo; Go &raquo;
+                    </button>
+                </a>
+                <a href="{% url 'recipe_update' object.pk %}">
+                    <button class="btn btn-secondary" type="button">
+                        Modify
+                    </button>
+                </a>
+                <a href="{% url 'recipe_delete' object.pk %}">
+                    <button class="btn btn-secondary" type="button">
+                        Delete
+                    </button>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'index' %}">
+        <button class="btn btn-secondary" type="button">
+            Back to index</button>
+    </a>
+
+    <a href="{% url 'recipe_create' %}">
+        <button class="btn btn-primary" type="button">
+            Create</button>
+    </a>
+{% endblock %}

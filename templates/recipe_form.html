@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+    {% block body %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>{{ form.title.label }}: {{ form.title }}</p>
+            {%  if form.title.errors|length %}
+                {% for error in form.title.errors %}
+                    <p style="color: white; background-color: #532a2a">
+                        {{ error }}
+                    </p>
+                {% endfor %}
+            {% endif %}
+            <p>{{ form.summary.label }}: {{ form.summary }}</p>
+            <p>{{ form.content.label }}: {{ form.content }}</p>
+
+            {% for error in form.non_field_errors %}
+                <p style="color: white; background-color: #532a2a">
+                    {{ error }}
+                </p>
+            {% endfor %}
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        <a href="{% url 'recipe_list' %}">
+            <button class="btn btn-secondary" type="button">
+                Back to list</button>
+        </a>
+    {% endblock %}

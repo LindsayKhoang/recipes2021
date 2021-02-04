@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+    {% block body %}
+        <h1>{{ object.title }}</h1>
+        <h2>{{ object.summary }}</h2>
+        <p>{{ object.content }}</p>
+
+        <a href="{% url 'recipe_list' %}">
+            <button class="btn btn-secondary" type="button">
+                Back to list</button>
+        </a>
+    {% endblock %}

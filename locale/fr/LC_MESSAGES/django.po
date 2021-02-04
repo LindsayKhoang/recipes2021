@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-04 11:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\app\views\log.py:23
+msgid "You've benn logged out"
+msgstr "Vous avez été déconnecté"
+
+#: .\templates\recipe_list.html:6
+msgid "Recipe list"
+msgstr "Liste des recettes"
+
+#: .\templates\recipe_list.html:7
+msgid ""
+"We accept no responsibility or liability (including, but not limited to, any "
+"direct or consequential loss or damage that might occur to you and/or any "
+"other third party) arising out of, or in connection with the information on "
+"this site, including information relating to the recipes it publishes."
+msgstr "Nous n'acceptons aucune responsabilité (y compris, mais sans s'y limiter,"
+ " toute perte ou dommage direct ou consécutif pouvant survenir à vous et / ou à tout"
+ " autre tiers) découlant de ou en relation avec les informations sur ce site, y compris"
+ " les informations relative aux recettes qu'il publie."

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{ object }}"?</p>
+        <button class="btn btn-primary" type="submit">Yes</button>
+    </form>
+    <a href="{% url 'recipe_list' %}">
+        <button class="btn btn-secondary" type="button">
+            Back to list</button>
+    </a>
+{% endblock %}
