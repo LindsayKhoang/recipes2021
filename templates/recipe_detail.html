@@ -3,6 +3,7 @@
         <h1>{{ object.title }}</h1>
         <h2>{{ object.summary }}</h2>
         <p>{{ object.content }}</p>
+        <img src="{{ object.image.url }}">
 
         <a href="{% url 'recipe_list' %}">
             <button class="btn btn-secondary" type="button">

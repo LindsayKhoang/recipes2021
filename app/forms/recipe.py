@@ -1,8 +1,6 @@
 from collections import OrderedDict
 
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm, UsernameField
-from django.core.exceptions import ValidationError
 
 from app.models import Recipe
 
@@ -10,7 +8,7 @@ from app.models import Recipe
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = ("title", "summary", "content")
+        fields = ("title", "summary", "content", "image")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,8 +17,9 @@ class RecipeForm(forms.ModelForm):
         content = forms.CharField(
             max_length=200, required=True, widget=forms.Textarea
         )
+        image = forms.ImageField()
         self.fields = OrderedDict(
-            {"title": title, "summary": summary, "content": content}
+            {"title": title, "summary": summary, "content": content, "image": image}
         )
 
     def clean_title(self):

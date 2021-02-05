@@ -7,6 +7,7 @@ class Recipe(models.Model):
         max_length=200, null=True, blank=False, default=""
     )
     content = models.TextField(null=True, blank=False, default="")
+    image = models.ImageField(upload_to='uploads', null=True)
 
     def __str__(self):
         return self.title

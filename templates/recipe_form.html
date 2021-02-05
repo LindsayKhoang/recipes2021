@@ -12,6 +12,7 @@
             {% endif %}
             <p>{{ form.summary.label }}: {{ form.summary }}</p>
             <p>{{ form.content.label }}: {{ form.content }}</p>
+            <p>{{ form.image.label }}: {{ form.image }}</p>
 
             {% for error in form.non_field_errors %}
                 <p style="color: white; background-color: #532a2a">
